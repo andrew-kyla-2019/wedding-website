@@ -1,0 +1,3 @@
+exclude: ['README.md']
+permalink: pretty
+port: 4010
