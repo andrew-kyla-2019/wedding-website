@@ -6,7 +6,8 @@
   <meta name="handheldfriendly" content="true">
   <meta name="mobileoptimized" content="240">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="css/main.css" rel="stylesheet">
+  <link href="/css/main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700,700i" rel="stylesheet">
 </head>
 <body>
 
@@ -14,9 +15,12 @@
 
   {% include navbar.html %}
 
-  {{content}}
+  <main id="main" role="main">
+    {{content}}
+  </main>
 
   {% include footer.html %}
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="{{site.baseurl}}/js/main.js"></script>
 </body>
 </html>

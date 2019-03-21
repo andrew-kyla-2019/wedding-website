@@ -1,0 +1,21 @@
+<header class="hero relative island" style="background-image: linear-gradient(to bottom, rgba(68, 68, 68, .35), rgba(68, 68, 68, .35)), url('/images/{{pageContent.heroInfo.heroImg}}')">
+  <div class="hero-content {% if pageContent.heroInfo.heroType == 'heroAlt' %}max-length hero-content-alt{% endif %}">
+    {% if pageContent.heroInfo.heroType == 'heroAlt' %}
+      {% if page.url == '/' %}
+        <strong class="giga push">{{pageContent.heroInfo.headline}}</strong>
+      {% else %}
+        <h1 class="giga">{{pageContent.heroInfo.headline}}</h1>
+      {% endif %}
+      {% include svg/save-the-date.html %}
+    {% else %}
+      {% if page.url == '/' %}
+        <strong>{{pageContent.heroInfo.headline}}</strong>
+      {% else %}
+        <h1>{{pageContent.heroInfo.headline}}</h1>
+      {% endif %}
+    {% endif %}
+  </div>
+  {% if pageContent.heroInfo.scrollIndicator %}
+    {% include patterns/scroll-indicator.html %}
+  {% endif %}
+</header>

@@ -1,0 +1,44 @@
+.masthead {
+  transition:
+    background-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.masthead.sticky {
+  background-color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100000;
+}
+
+.wordmark {
+  width: 100%;
+  max-width: 10rem;
+}
+
+.nav li:nth-child(2) {
+  margin-right: 2.6rem;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: var(--color-primary);
+}
+
+.masthead.sticky .nav a {
+  color: var(--color-primary);
+}
+
+.masthead.sticky .nav a:hover {
+  color: var(--color-secondary);
+}

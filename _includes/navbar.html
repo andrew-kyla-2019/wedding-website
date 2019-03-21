@@ -1,13 +1,5 @@
-<header class="masthead" role="banner">
-  <div class="">
-    {% if site.data.site.logoType == 'logo' %}
-    {% elsif site.data.site.logoType == 'wordmark' %}
-      {% if page.url == '/' %}
-        <h1>{{site.data.site.title}}</h1>
-      {% else %}
-        <strong>{{site.data.site.title}}</strong>
-      {% endif %}
-    {% endif %}
-    {% include nav.html %}
+<header class="masthead{% if site.data.header.fixed %} navbar-fixed{% endif %} sticky" role="banner">
+  <div class="{% if site.data.header.wrapper %}wrapper{% endif %} {{site.data.header.padding}}">
+    {% include nav.html navClass='nav' ulClass='list-group flex-row flex-align-center push-0' liLogo='content-fill' %}
   </div>
 </header>

@@ -1,0 +1,12 @@
+<section id="{{include.id}}" class="bg-grey-light pad-t-2 pad-b-2 gutter" tabindex="0">
+  <div class="max-length text-center pad-t-2 pad-b-2">
+    <h2 class="push-2">{{pageContent.introInfo.heading}}</h2>
+    <p class="push-2">{{pageContent.introInfo.paragraph}}</p>
+    {% if pageContent.introInfo.photo %}
+      <div class="embed embed-16by9">
+        <div class="embed-item bg-primary"></div>
+        <img class="embed-item" src="/images/{{pageContent.introInfo.photo}}" alt="">
+      </div>
+    {% endif %}
+  </div>
+</section>
